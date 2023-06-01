@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #040622;
+  color: #fff;
+}
+
+.header {
+  border-radius: 25px; /*repeating-linear-gradient(to right, rgba(70, 0, 0, 0.936), rgba(2, 5, 30, 0.735))*/
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-top: 0%;
+  margin-right: 1%;
+  padding: 0%;
+  width: 60;
+  height: 89vh;
+  background-image:repeating-linear-gradient(
+      to bottom left,
+      rgba(110, 12, 27, 0.493),
+      rgba(3, 5, 26, 0.966),
+      rgb(78, 2, 2)
+    ),
+    url(/header-image.png);
+  background-size: contain;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.logo {
+  width: 14%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-left: 9px;
+  cursor: pointer;
+}
+.language-btn {
+  display: inline-block;
+  align-items: center;
+  background: transparent;
+  border: 1px solid#eae0e0;
+  padding: 7px 20px;
+}
+.language-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+.header-content {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-20%, -20%);
+  text-align: left;
+  margin-top: 90px;
+}
+.header-content h1 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 59;
+  max-width: 50;
+  margin-bottom: 2px;
+}
+.header-content h3 {
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.email-signup {
+  backface-visibility: hidden;
+  background-color: #040622;
+  border-radius: 8px;
+  justify-content:right;
+
+  display:flex;
+  margin-top: 30px;
+  align-items:center;
+  overflow:hidden;   
+  border-style:solid;
+  border-color: #7f81a4;
+  
+
+
+}
+.email-signup input{
+  flex: 1;
+  border: 12px;
+  border-color: #fff;
+  outline: 0;
+  margin-left:16px;
+  background-color:transparent;
+}
+.email-signup button {
+  background: #d81010;
+  border: 0;
+  outline: 0;
+  color: #f2e4e4;
+  /*background: transparent;*/
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px 30px;
+}
+.features {
+  padding: 50px 12%;
+  font-size: 22px;
+}
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.text-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.features h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/*-------------faq----------------*/
+.faq {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+.faq h2 {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.accordion {
+  margin: 100px auto;
+  width: 1000px;
+  max-width: 750px;
+}
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #364581;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s; /* + turn into x*/
+}
+input[type="radio"] {
+  display: none;
+}
+.accordion .content {
+  /* hidden answer*/
+  background: #364581;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.12s, padding 0.5s; /* for height wehn point */
+}
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+.faq .email-signup {
+  max-width: 600px;
+  margin: 10px auto 60px;
+}
+.faq small {
+  font-size: 15px;
+}
+/*--------- footer------------*/
+.footer {
+  padding: 50px 15% 10px;
+  border-top: 6px solid #333;
+  color: #777;
+}
+.footer h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 25px;
+}
+.footer .col a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer .row {
+  align-items: flex-end;
+  padding: 10px 0;
+}
+
+.footer .language-btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.copyright-txt {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*------ media quesries for samll screen----------*/
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+  nav button {
+    padding: 5px 10px;
+  }
+  nav .language-btn {
+    padding: 4px 8px;
+  }
+  .header-content {
+    position: unset;
+    transform: none;
+    padding-top: 150px;
+  }
+  .header-content h1 {
+    font-size: 30px;
+  }
+  .email-signup button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+  .text-col,
+  .img-col {
+    flex-basis: 100%;
+  }
+  .features h2 {
+    font-size: 30px;
+  }
+  .features p {
+    font-size: 30px;
+  }
+  .row:nth-child(2),
+  .row:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+  .features .row {
+    padding: 10px 0;
+  }
+  .faq h2 {
+    font-size: 20px;
+  }
+  .accordion .content {
+    font-size: 14;
+  }
+  .accordion li label {
+    padding: 10px;
+    font-size: 14px;
+  }
+  label::after {
+    font-size: 22px;
+  }
+}
