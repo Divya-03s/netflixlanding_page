@@ -25,7 +25,7 @@ body {
       rgba(3, 5, 26, 0.966),
       rgb(78, 2, 2)
     ),
-    url(/header-image.png);
+    url(header-image.png);
   background-size: contain;
   background-position: center;
   padding: 10px 8%;
